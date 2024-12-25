@@ -1,0 +1,15 @@
+.productCard{
+    /* color: red; */
+}
+.card{
+    border:1px solid black;
+    padding: 10px;
+    width: 23%;
+    height: auto;
+    border-radius: 8px;
+}
+.productLine{
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+}

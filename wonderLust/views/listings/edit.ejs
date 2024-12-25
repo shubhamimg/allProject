@@ -1,0 +1,131 @@
+<%- include("./includes/head.ejs") %> <%- include("./includes/header.ejs") %>
+
+<!-- Hero -->
+<div class="relative overflow-hidden">
+  <div
+    class="mx-auto max-w-screen-md py-12 px-4 sm:px-6 md:max-w-screen-xl md:py-20 lg:py-32 md:px-8"
+  >
+    <div class="md:pe-8 md:w-1/2 xl:pe-0 xl:w-5/12">
+      <!-- Title -->
+      <h1
+        class="text-3xl text-gray-800 font-bold md:text-4xl md:leading-tight lg:text-5xl lg:leading-tight"
+      >
+        Edit Your Property
+      </h1>
+      <!-- End Title -->
+      <div
+        class="py-6 flex items-center text-sm text-gray-400 before:flex-1 before:border-t before:me-6 after:flex-1 after:border-t after:ms-6"
+      >
+      Fill the Form
+      </div>
+
+      <!-- Form -->
+      <form method="POST" action="/listings/<%= allListings._id %>?_method=PUT">
+        <div class="mb-4">
+          <label
+            for="title"
+            class="block text-sm font-medium"
+            ><span class="sr-only">Property title</span></label
+          >
+          <input
+            type="text"
+            id="title"
+            name="listing[title]"
+            class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+            value="<%= allListings.title %>"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label
+            for="description"
+            class="block text-sm font-medium"
+            ><span class="sr-only">Property Description</span></label
+          >
+          <input
+            type="text"
+            id="description"
+            name="listing[description]"
+            class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+            value="<%= allListings.description %>"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label
+            for="price"
+            class="block text-sm font-medium"
+            ><span class="sr-only">Price</span></label
+          >
+          <input
+            type="text"
+            id="price"
+            name="listing[price]"
+            class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+            value="<%= allListings.price %>"
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="Location"
+            class="block text-sm font-medium"
+            ><span class="sr-only">Location</span></label
+          >
+          <input
+            type="text"
+            id="location"
+            name="listing[location]"
+            class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+            value="<%= allListings.location %>"
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="Country"
+            class="block text-sm font-medium"
+            ><span class="sr-only">Country</span></label
+          >
+          <input
+            type="text"
+            id="country"
+            name="listing[country]"
+            class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+            value="<%= allListings.country %>"
+          />
+        </div>
+        <div class="mb-4">
+          <label
+            for="Image"
+            class="block text-sm font-medium"
+            ><span class="sr-only">Image</span></label
+          >
+          <input
+            type="text"
+            id="image"
+            name="listing[image]"
+            class="py-3 px-4 block w-full border border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+            value="<%= allListings.image %>"
+          />
+        </div>
+
+        <div class="grid">
+          <button
+            type="submit"
+            class="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-lime-500 text-white hover:bg-lime-700 focus:outline-none focus:bg-lime-700 disabled:opacity-50 disabled:pointer-events-none"
+          >
+            Edit
+          </button>
+        </div>
+      </form>
+      <!-- End Form -->
+    </div>
+  </div>
+
+  <div
+    class="hidden md:block md:absolute md:top-0 md:start-1/2 md:end-0 h-full bg-[url('https://images.unsplash.com/photo-1606868306217-dbf5046868d2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80')] bg-no-repeat bg-center bg-cover"
+  ></div>
+  <!-- End Col -->
+</div>
+<!-- End Hero -->
+
+<%- include("./includes/foot.ejs") %> <%- include("./includes/footer.ejs") %>
